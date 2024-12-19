@@ -22,6 +22,7 @@ SCOPES = [
 CLIENT_ID = st.secrets["general"]["CLIENT_ID"]
 CLIENT_SECRET = st.secrets["general"]["CLIENT_SECRET"]
 REDIRECT_URI = st.secrets["general"]["REDIRECT_URI"]
+DISCOVERY_DOC = "https://accounts.google.com/.well-known/openid-configuration"
 
 st.title("Health Buddy App")
 
