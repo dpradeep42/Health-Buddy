@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 from google.oauth2 import id_token
 from google.auth.transport import requests
@@ -20,10 +19,9 @@ SCOPES = [
     "https://www.googleapis.com/auth/fitness.body.write"
 ]
 
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-REDIRECT_URI = os.getenv("REDIRECT_URI")
-DISCOVERY_DOC = "https://accounts.google.com/.well-known/openid-configuration"
+CLIENT_ID = st.secrets["general"]["CLIENT_ID"]
+CLIENT_SECRET = st.secrets["general"]["CLIENT_SECRET"]
+REDIRECT_URI = st.secrets["general"]["REDIRECT_URI"]
 
 st.title("Health Buddy App")
 
